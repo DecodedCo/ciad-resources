@@ -1,3 +1,22 @@
+/* INDEX 
+-----------
+  1.  PAGE SETUP
+  2.  FONTS
+  3.  PAGE STRUCTURE
+  4.  IMAGES
+  4.  BUTTONS
+  5.  FORMS
+  6.  MEDIA QUERIES
+
+*/
+
+
+
+
+
+/* 1. PAGE SETUP
+----------------*/
+
 /* apply a natural box layout model to all elements, but allowing components to change */
 html {
   box-sizing: border-box;
@@ -20,12 +39,23 @@ body {
   background-position: bottom center;
 }
 
+/* 2. FONTS 
+------------*/
+
 h1 {
   font-size: 2.5rem;
   line-height: 2.5rem;
   letter-spacing: -0.03rem;
   margin-top: 0;
 }
+
+p#message {
+  font-size: 1.2em;
+  font-weight: bold;
+}
+
+/* 3. PAGE STRUCTURE  
+--------------------*/
 
 section {
   min-height: 100%;
@@ -35,13 +65,56 @@ section {
   padding:10%;
 }
 
-p#message {
-    font-size: 1.2em;
-  font-weight: bold;
+.card {
+  background: white;
+  padding: 3em;
+  box-shadow: 1px 2px 11px -1px rgba(0, 0, 0, 0.4);
+  position: relative;
 }
 
+nav {
+  width: 100%;
+  margin: 2em auto;
+}
+
+/* 4. IMAGES
+-----------*/
+
+.logo {
+  max-width: 100px;
+  display: block;
+  margin: 0 auto 2em;
+}
+
+/* 4. BUTTONS
+-----------*/
+
+.nav-button {
+  display: block;
+  width: 100%;
+  text-align: center;
+  border: 3px solid white;
+  border-radius: 35px;
+  padding: 1em;
+  font-weight: 700;
+  text-decoration: none;
+  color: black;
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+.nav-button:hover {
+  background: white;
+  color: black;
+}
+
+
+/* 5. FORMS
+-----------*/
+
 button {
-    width:100%;
+  width:100%;
   margin-top:15px;
   
 }
@@ -51,6 +124,10 @@ input[type="text"] {
   width: 100%;
 }
 
+
+/* 6. MEDIA QUERIES
+-------------------*/
+
 /* If the browser width is above 640px, make my section smaller in width */
 
 @media (min-width: 640px) {
@@ -58,6 +135,12 @@ input[type="text"] {
   section {
     width: 100%;
     padding:10% 30%;
+  }
+
+  .logo {
+    position: absolute;
+    top: -35px;
+    right: -35px;
   }
 
 } /* END of media query */
