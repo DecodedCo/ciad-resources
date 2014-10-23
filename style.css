@@ -1,0 +1,72 @@
+/* apply a natural box layout model to all elements, but allowing components to change */
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+html, body {
+    height: 100%;
+}
+
+body {
+  font-family: 'Hind', sans-serif;
+  font-size: 100%;
+  margin:0;
+  background: url(https://c2.staticflickr.com/8/7210/6863823587_ff450c0ed1_z.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: bottom center;
+}
+
+h1 {
+  font-size: 2.5rem;
+  line-height: 2.5rem;
+  letter-spacing: -0.03rem;
+  margin-top: 0;
+}
+
+section {
+  min-height: 100%;
+  background: rgba(215,218,0,0.85);
+  width:100%;
+  margin: 0px auto;
+  padding:10%;
+}
+
+p#message {
+    font-size: 1.2em;
+  font-weight: bold;
+}
+
+button {
+    width:100%;
+  margin-top:15px;
+  
+}
+
+input[type="text"] {
+    padding: 0.5em;
+  width: 100%;
+}
+
+/* If the browser width is above 640px, make my section smaller in width */
+
+@media (min-width: 640px) {
+
+  section {
+    width: 100%;
+    padding:10% 30%;
+  }
+
+} /* END of media query */
+
+
+
+
+
+
+
+
+
