@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- CIAD App by Chris & Ali  -->
+    <title>BBC Sport: Loyalty Token</title>
+    
+    <!-- Custom Icons for homescreen -->
+    <link rel="apple-touch-icon" href="https://raw.githubusercontent.com/DecodedCo/codeinaday/master/apple-touch-icon.png">
+    <link rel="icon" sizes="192x192" href="https://raw.githubusercontent.com/DecodedCo/codeinaday/master/apple-touch-icon.png">
+
+    <!-- Fullscreen mode for web app -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Links to CSS Stylesheets -->
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/normalize/3.0.1/normalize.min.css">
+    <link href='//fonts.googleapis.com/css?family=Hind:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="style.css">
+
+  </head>
+  <body>
+    <section>
+      
+      <div class="card">
+
+        <img class="logo" src="http://grandprix247.com/wp-content/uploads/2013/12/bbc-logo-21217808.jpg" alt="">
+
+        <h1>About the competition</h1>
+
+        <p id="intro">Learn more about the events on offer</p>
+        <ul>
+          <li>F1 one Dubai</li>
+          <li>Arsenal vs Cheslsea</li>
+          <li>The Grand National</li>
+          <li>Wimbledon Final</li>
+        </ul>
+
+        <form action="http://api.decoded.co/checkin/bbc-sport">
+          <input type="text" placeholder="Please your twitter name" name="username">
+          <button>Checkin!</button>
+        </form>
+      </div>
+
+      <nav>
+        <a class="nav-button" href="index.html">Back to Home</a>
+      </nav>
+
+    </section>
+    
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="form.js"></script>
+    <script src="location.js"></script>
+    
+  </body>
+</html>
