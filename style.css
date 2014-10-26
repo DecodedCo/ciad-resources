@@ -28,7 +28,7 @@ h1 {
 }
 
 .logo {
-  max-width: 100px;
+  width: 100px;
   display: block;
   margin: 0 auto 2em; // center the logo 
 }
@@ -95,7 +95,7 @@ input[type="text"] {
 
   section {
     width: 100%;
-    padding:10% 30%;
+    padding:10% 15%;
   }
 
     .logo {
@@ -104,6 +104,23 @@ input[type="text"] {
       right: -35px;
     }
   }
+
+
+  @media (min-width: 1100px) {
+
+    section {
+      width: 100%;
+      padding:10% 20%;
+    }
+
+    @media (min-width: 1600px) {
+
+      section {
+        width: 100%;
+        padding:10% 30%;
+      }
+
+    }
 
 } /* END of media query */
 
