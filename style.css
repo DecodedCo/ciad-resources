@@ -27,11 +27,27 @@ h1 {
   margin-top: 0;
 }
 
+img, iframe {
+  width: 100%;
+  height: auto;
+}
+
 .logo {
   width: 100px;
   display: block;
   margin: 0 auto 2em; // center the logo 
 }
+
+.map {
+  width: 100%;
+}
+
+.map img {
+  width: 100px;
+  display: block;
+  margin: 0 auto;
+}
+
 
 section {
   min-height: 100%;
@@ -89,6 +105,10 @@ input[type="text"] {
   width: 100%;
 }
 
+.desk-only {
+  display: none;
+}
+
 /* If the browser width is above 640px, make my section smaller in width */
 
 @media (min-width: 640px) {
@@ -102,6 +122,14 @@ input[type="text"] {
       position: absolute;
       top: -35px;
       right: -35px;
+    }
+
+    .mobile-only {
+      display: none;
+    }
+
+    .desk-only {
+      display: block;
     }
   }
 
