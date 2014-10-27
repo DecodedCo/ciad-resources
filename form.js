@@ -10,9 +10,26 @@ jQuery("form").submit(function() {
         success: function(result){
             console.log(result);
             // 6. Change the paragraph with an id 'message' to display a welcome message
-            $("p#message").html("Hello there " + result.username + "! Number of checkins: " + result.checkIns);   
+            //$("p#message").html("Hello there " + result.username + "! Number of checkins: " + result.checkIns);
+
+                var remainingLogins = 10 - result.checkIns;
+
+                if (remainingLogins == 9) {
+                    $("p#message").html("Welcome " + result.username + "! I see this is your first time checking in. We look forward to seeing more of you around here")
+                } else if (remainingLogins > 0) {
+                    $("p#message").html("Welcome back " + result.username + ", just " + remainingLogins + " more logins before your free tickets!")
+                } else if (remainingLogins == 0) {
+                    $("p#message").html("Congratulations " + result.username + ", If you haven't already, you can now claim your tickets!" )
+                }
+ 
             // 7. Hide the form now the user has checked in
             $("form").hide();
+            
+            // 7a. Make the welcome message bounce with joy!
+            $('#message').addClass('animated bounce');
+            // 7b. Fade out map
+            $('.map').fadeOut();
+            
             // 8. Once they have checked in, stop watching their position
             if (typeof watchUser != "undefined") 
                 navigator.geolocation.clearWatch(watchUser);
@@ -21,4 +38,6 @@ jQuery("form").submit(function() {
     
     // 9. Allow form to submit without reloading the page
     event.preventDefault();
+
 }) // END submit
+

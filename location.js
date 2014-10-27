@@ -32,7 +32,7 @@ function showPosition(position) {
   var radius = 0.01; // so this is actually 250 meters 
   
   // if statement to work out if the user is at the target location.
-  if (distance < radius) {
+  if (distance > radius) {
     // Show the form
     $("form").show();
     $("p#message").html("Congratulations sports fan, you've arrived!");

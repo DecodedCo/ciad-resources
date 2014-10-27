@@ -109,6 +109,11 @@ input[type="text"] {
   display: none;
 }
 
+.hide {
+  display: none !important;
+}
+
+
 /* If the browser width is above 640px, make my section smaller in width */
 
 @media (min-width: 640px) {
